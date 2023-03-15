@@ -1,0 +1,9 @@
+<ng-template #rt let-r="result" let-t="term">
+  <img [src]="r['avatarUrl']" class="mr-1" style="width: 16px">
+  <ngb-highlight [result]="r.login" [term]="t"></ngb-highlight>
+</ng-template>
+
+<label for="typeahead-template">Typeahead ngBootstrap Component</label>
+<input id="typeahead-template" type="text" class="form-control" [ngbTypeahead]="search" [resultTemplate]="rt"
+       [inputFormatter]="formatter" />
+<hr>
